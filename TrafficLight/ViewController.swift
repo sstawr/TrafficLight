@@ -7,11 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-  
+    @IBOutlet var redLightView: UIView!
+    @IBOutlet var yellowLightView: UIView!
+    @IBOutlet var greenLightView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
+        
+        redLightView.alpha = 0.3
+        yellowLightView.alpha = 0.3
+        greenLightView.alpha = 0.3
     }
 
 

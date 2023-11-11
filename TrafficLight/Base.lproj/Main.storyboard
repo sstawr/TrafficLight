@@ -15,9 +15,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YKO-Qo-Gko">
+                                <rect key="frame" x="170" y="75" width="90" height="286"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk3-fS-Ems">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="2eu-I6-ntL"/>
+                                            <constraint firstAttribute="height" constant="90" id="7KN-em-7DT"/>
+                                            <constraint firstAttribute="width" constant="90" id="BTe-5B-Iha"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="qOy-78-Cee"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-bh-SeK">
+                                        <rect key="frame" x="0.0" y="98" width="90" height="90"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="CrM-su-Fgh"/>
+                                            <constraint firstAttribute="width" constant="90" id="eYD-eE-CZ3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-kl-sQX">
+                                        <rect key="frame" x="0.0" y="196" width="90" height="90"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="Tgo-CM-PqA"/>
+                                            <constraint firstAttribute="width" constant="90" id="zjd-YE-sm0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YKO-Qo-Gko" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I4N-VQ-b0z"/>
+                            <constraint firstItem="YKO-Qo-Gko" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Tnr-9w-mfg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="lUq-kl-sQX" id="uEE-FQ-P91"/>
+                        <outlet property="redLightView" destination="mk3-fS-Ems" id="eky-I7-vLV"/>
+                        <outlet property="yellowLightView" destination="kJk-bh-SeK" id="LOb-ah-DY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,6 +69,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
