@@ -3,6 +3,7 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,39 +24,49 @@
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="2eu-I6-ntL"/>
                                             <constraint firstAttribute="height" constant="90" id="7KN-em-7DT"/>
                                             <constraint firstAttribute="width" constant="90" id="BTe-5B-Iha"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="qOy-78-Cee"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-bh-SeK">
                                         <rect key="frame" x="0.0" y="98" width="90" height="90"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="CrM-su-Fgh"/>
-                                            <constraint firstAttribute="width" constant="90" id="eYD-eE-CZ3"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-kl-sQX">
                                         <rect key="frame" x="0.0" y="196" width="90" height="90"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="Tgo-CM-PqA"/>
-                                            <constraint firstAttribute="width" constant="90" id="zjd-YE-sm0"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kJk-bh-SeK" firstAttribute="width" secondItem="mk3-fS-Ems" secondAttribute="width" id="EZJ-k5-PCE"/>
+                                    <constraint firstItem="mk3-fS-Ems" firstAttribute="width" secondItem="YKO-Qo-Gko" secondAttribute="height" multiplier="45:143" id="IAh-bn-JVs"/>
+                                    <constraint firstItem="kJk-bh-SeK" firstAttribute="height" secondItem="mk3-fS-Ems" secondAttribute="height" id="K5g-ZZ-vQM"/>
+                                    <constraint firstItem="lUq-kl-sQX" firstAttribute="width" secondItem="kJk-bh-SeK" secondAttribute="width" id="deQ-sZ-aap"/>
+                                    <constraint firstItem="lUq-kl-sQX" firstAttribute="height" secondItem="kJk-bh-SeK" secondAttribute="height" id="ton-G3-H6V"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cff-By-Q5Z">
+                                <rect key="frame" x="170" y="564.33333333333337" width="90" height="34.333333333333371"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="6uS-pm-QRg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YKO-Qo-Gko" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I4N-VQ-b0z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cff-By-Q5Z" secondAttribute="bottom" multiplier="4:3" constant="100" id="SaK-lS-lr4"/>
                             <constraint firstItem="YKO-Qo-Gko" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Tnr-9w-mfg"/>
+                            <constraint firstItem="Cff-By-Q5Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YdM-er-2v1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeLightButton" destination="Cff-By-Q5Z" id="9Gt-04-iE9"/>
                         <outlet property="greenLightView" destination="lUq-kl-sQX" id="uEE-FQ-P91"/>
                         <outlet property="redLightView" destination="mk3-fS-Ems" id="eky-I7-vLV"/>
                         <outlet property="yellowLightView" destination="kJk-bh-SeK" id="LOb-ah-DY2"/>
@@ -67,6 +78,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
