@@ -14,6 +14,8 @@ final class ViewController: UIViewController {
     @IBOutlet var greenLightView: UIView!
     @IBOutlet var changeLightButton: UIButton!
     
+    var currentActiveLightNumber = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,5 +31,25 @@ final class ViewController: UIViewController {
     }
 
 
+    @IBAction func changeLightButtonDidTapped(_ sender: UIButton) {
+        sender.setTitle("Next", for: .normal)
+        
+        switch currentActiveLightNumber {
+        case 0:
+            greenLightView.alpha = 0.3
+            redLightView.alpha = 1
+            currentActiveLightNumber += 1
+        case 1:
+            redLightView.alpha = 0.3
+            yellowLightView.alpha = 1
+            currentActiveLightNumber += 1
+        case 2:
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 1
+            currentActiveLightNumber = 0
+        default:
+            break
+        }
+    }
 }
 
